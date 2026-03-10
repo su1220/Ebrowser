@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Phase 6 で CloudKit を有効化する際にコメントアウトを解除 -->
+	<!-- <key>com.apple.developer.icloud-container-identifiers</key>
+	<array>
+		<string>iCloud.com.ebrowser.app</string>
+	</array>
+	<key>com.apple.developer.icloud-services</key>
+	<array>
+		<string>CloudKit</string>
+	</array>
+	<key>com.apple.developer.ubiquity-kvstore-identifier</key>
+	<string>$(TeamIdentifierPrefix)com.ebrowser.app</string> -->
+</dict>
+</plist>

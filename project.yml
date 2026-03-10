@@ -1,0 +1,35 @@
+name: Ebrowser
+options:
+  bundleIdPrefix: com.ebrowser
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.2"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: 5.9
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  Ebrowser:
+    type: application
+    platform: iOS
+    sources:
+      - path: Ebrowser
+        excludes:
+          - "**/*.md"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ebrowser.app
+        INFOPLIST_FILE: Ebrowser/Resources/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ENABLE_PREVIEWS: YES
+    entitlements:
+      path: Ebrowser/Resources/Ebrowser.entitlements
+    capabilities:
+      iCloud:
+        cloudKit: true
