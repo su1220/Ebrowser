@@ -18,6 +18,7 @@ struct ContentView: View {
             get: { appViewModel.selectedTab.rawValue },
             set: { appViewModel.selectedTab = AppTab(rawValue: $0) ?? .browser }
         )) {
+            // environment(appViewModel) はタブ全体に伝播し、WordDetailView からも参照できる
             // ブラウザタブ
             BrowserView(appViewModel: appViewModel)
                 .tabItem {
@@ -46,6 +47,7 @@ struct ContentView: View {
                 }
                 .tag(AppTab.settings.rawValue)
         }
+        .environment(appViewModel)
     }
 }
 

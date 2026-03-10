@@ -11,6 +11,7 @@ final class SavedWord {
     var audioURL: String?       // 発音音声URL（Free Dictionary APIから取得）
     var savedAt: Date
     var sourceURL: String?      // 保存時に閲覧していたページのURL
+    var memo: String = ""       // ユーザーメモ（自由記述・URL貼り付け可）
 
     /// 所属フォルダ（nilの場合は未分類）
     var folder: WordFolder?

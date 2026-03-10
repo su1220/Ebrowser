@@ -1,5 +1,10 @@
 import Foundation
 
+/// .sheet(item:) で String を直接使えるようにする拡張
+extension String: @retroactive Identifiable {
+    public var id: String { self }
+}
+
 /// アプリ全体で使用する定数
 enum Constants {
 

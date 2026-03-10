@@ -122,28 +122,43 @@ Phase 6: iCloud同期・仕上げ            （約1-2日）
 ## Phase 4: 単語帳機能
 
 ### 4-1. フォルダ管理
-- [ ] `FolderListView.swift` 作成
-- [ ] フォルダ一覧表示
-- [x] フォルダ作成（名前入力アラート）← FolderPickerView に先行実装済み
-- [ ] フォルダ削除（スワイプ）
-- [ ] フォルダリネーム（長押しコンテキストメニュー）
+- [x] `FolderListView.swift` 作成
+- [x] フォルダ一覧表示（単語数バッジ付き）
+- [x] フォルダ作成（名前入力アラート）
+- [x] フォルダ削除（スワイプ・削除時は単語を Unfiled に移動）
+- [x] フォルダリネーム（長押しコンテキストメニュー）
 
 ### 4-2. 単語一覧
-- [ ] `WordListView.swift` 作成
-- [ ] フォルダ内の単語一覧表示（単語・品詞）
-- [ ] 単語削除（スワイプ）
-- [ ] 単語をフォルダ間移動（長押しコンテキストメニュー）
+- [x] `WordListView.swift` 作成
+- [x] フォルダ内の単語一覧表示（単語・品詞バッジ・定義プレビュー）
+- [x] 単語削除（スワイプ）
+- [x] 単語をフォルダ間移動（長押しコンテキストメニュー）
 
 ### 4-3. 単語詳細
-- [ ] `WordDetailView.swift` 作成
-- [ ] 英文解説・例文・発音ボタン表示
-- [ ] クリップボードコピーボタン実装
+- [x] `WordDetailView.swift` 作成
+- [x] 英文解説・例文・発音ボタン表示（Definition・Example 個別読み上げ付き）
+- [x] クリップボードコピーボタン実装
   ```
   [Word] {word} ({partOfSpeech})
   [Definition] {definition}
   [Example] {example}
   ```
-- [ ] コピー完了フィードバック（ハプティクス）
+- [x] コピー完了フィードバック（ハプティクス）
+
+---
+
+## Phase 4.5: 単語詳細の拡張
+
+### 4.5-1. Source URL をタップしてブラウザ表示
+- [x] `AppViewModel` を `ContentView` で `.environment()` 注入し全タブへ伝播
+- [x] Source URL をタップ可能なリンクとして表示（safari アイコン付き）
+- [x] タップ時にブラウザタブへ切り替えて該当 URL を開く
+
+### 4.5-2. メモ欄の追加
+- [x] `SavedWord` モデルに `memo: String` フィールドを追加（デフォルト値 `""`）
+- [x] `WordDetailView` に編集可能な `TextEditor` メモ欄を追加（SwiftData 自動保存）
+- [x] メモ内の URL を `NSDataDetector` で検出してタップ可能なリンクとして表示
+- [x] メモ内のリンクタップでブラウザタブを開く
 
 ---
 

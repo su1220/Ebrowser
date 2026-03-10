@@ -32,6 +32,11 @@ final class SpeechService {
         synthesizer.speak(utterance)
     }
 
+    /// 任意のテキストを合成音声で読み上げる（Definition・Example 用）
+    func speakText(_ text: String) {
+        speakWithSynthesizer(text: text)
+    }
+
     /// 再生を停止する
     func stop() {
         audioPlayer?.pause()
