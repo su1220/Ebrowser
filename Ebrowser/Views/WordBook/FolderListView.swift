@@ -7,6 +7,7 @@ struct FolderListView: View {
     @Query(sort: \WordFolder.createdAt) private var folders: [WordFolder]
     @Query(sort: \SavedWord.savedAt, order: .reverse) private var allWords: [SavedWord]
     @Environment(\.modelContext) private var modelContext
+    @Environment(AppViewModel.self) private var appViewModel
 
     @State private var showNewFolderAlert = false
     @State private var newFolderName = ""
@@ -72,6 +73,15 @@ struct FolderListView: View {
             }
             .navigationTitle("単語帳")
             .toolbar {
+                // 学習ボタン（フラッシュカードタブへ切り替え）
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        appViewModel.selectedTab = .flashcard
+                    } label: {
+                        Label("学習する", systemImage: "rectangle.on.rectangle")
+                    }
+                    .disabled(allWords.isEmpty)
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         newFolderName = ""
