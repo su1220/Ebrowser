@@ -14,6 +14,7 @@
 		3AE1C15FDDA8B21D684A56B3 /* FlashcardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95234E76825F60DD4780D7E /* FlashcardViewModel.swift */; };
 		4106D26AF6BF9F55A1BDCE09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CF889CF4FE466418C8FF36 /* Constants.swift */; };
 		4108257677087F6A3326DAED /* AddressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACCAABE54ACC687508C517 /* AddressBarView.swift */; };
+		4BC0CE63A87A382BED63F02F /* LongPressTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D4AB1B12203A7A53A80F0 /* LongPressTextView.swift */; };
 		599F02748BBC8B328CBE66DC /* WordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F8049FF1BE88137E04ED6 /* WordDetailView.swift */; };
 		59BC73703FAF90B59D593BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B621041DB055E67E1EA176B /* Assets.xcassets */; };
 		727594FBD18EB6DF229CABDD /* EbrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA2D15D905AB4FB85DC805 /* EbrowserApp.swift */; };
@@ -23,6 +24,7 @@
 		9F4C5AAECEFB3E6440762F09 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB2B30D69D0FE27C0068B4 /* SpeechService.swift */; };
 		A0CD880F8954B1F00BEA3125 /* BrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4835530BA528D57AB6544464 /* BrowserView.swift */; };
 		A6C294A8B3EEA58CB4EB60EA /* WordDefinitionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97A0B31ABC0ED3A33FFA50 /* WordDefinitionSheet.swift */; };
+		B54C8397EA2676E39CF78014 /* WordDefinitionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAB9C996B66047271D348C2 /* WordDefinitionContentView.swift */; };
 		BBA367A208284CE3AA6466D5 /* WordDefinitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597A408D0B0C0C2639DE05AE /* WordDefinitionViewModel.swift */; };
 		C5673A2C02109B686D6AF91C /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAF026165C8BA3972002069 /* Bookmark.swift */; };
 		C9EAB653EB052D78DD763037 /* WordFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD2E35313D12BA50488B3B2 /* WordFolder.swift */; };
@@ -62,7 +64,9 @@
 		AC97A0B31ABC0ED3A33FFA50 /* WordDefinitionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionSheet.swift; sourceTree = "<group>"; };
 		AD5F8049FF1BE88137E04ED6 /* WordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailView.swift; sourceTree = "<group>"; };
 		AEFB07A4134474A9A43ABE98 /* WordBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBookViewModel.swift; sourceTree = "<group>"; };
+		B48D4AB1B12203A7A53A80F0 /* LongPressTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressTextView.swift; sourceTree = "<group>"; };
 		B7DB65F638C3DFB9B07BDBBB /* BrowsingHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsingHistory.swift; sourceTree = "<group>"; };
+		BCAB9C996B66047271D348C2 /* WordDefinitionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionContentView.swift; sourceTree = "<group>"; };
 		BCB40612A0A826268EB4BDC6 /* DictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryService.swift; sourceTree = "<group>"; };
 		BD7E3E672BBDEE08830093C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CEACCAABE54ACC687508C517 /* AddressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBarView.swift; sourceTree = "<group>"; };
@@ -144,7 +148,9 @@
 				CEACCAABE54ACC687508C517 /* AddressBarView.swift */,
 				4835530BA528D57AB6544464 /* BrowserView.swift */,
 				07A19D408DF273273C1B8F6B /* FolderPickerView.swift */,
+				B48D4AB1B12203A7A53A80F0 /* LongPressTextView.swift */,
 				47FBCF3610B2049EEFC91A57 /* WebViewRepresentable.swift */,
+				BCAB9C996B66047271D348C2 /* WordDefinitionContentView.swift */,
 				AC97A0B31ABC0ED3A33FFA50 /* WordDefinitionSheet.swift */,
 			);
 			path = Browser;
@@ -279,11 +285,13 @@
 				149960CABACA3B5AFA4A62BF /* FolderListView.swift in Sources */,
 				0D30FE611A7858270A293087 /* FolderPickerView.swift in Sources */,
 				79E4B767BFC3890CD1649658 /* HistoryView.swift in Sources */,
+				4BC0CE63A87A382BED63F02F /* LongPressTextView.swift in Sources */,
 				D75236E5D94727C9D6309364 /* SavedWord.swift in Sources */,
 				EA73075126BE88C42ECB29B7 /* SettingsView.swift in Sources */,
 				9F4C5AAECEFB3E6440762F09 /* SpeechService.swift in Sources */,
 				17FAA16FC8C0C55C9DC01EB3 /* WebViewRepresentable.swift in Sources */,
 				FB40029CC92356562637E04B /* WordBookViewModel.swift in Sources */,
+				B54C8397EA2676E39CF78014 /* WordDefinitionContentView.swift in Sources */,
 				A6C294A8B3EEA58CB4EB60EA /* WordDefinitionSheet.swift in Sources */,
 				BBA367A208284CE3AA6466D5 /* WordDefinitionViewModel.swift in Sources */,
 				599F02748BBC8B328CBE66DC /* WordDetailView.swift in Sources */,

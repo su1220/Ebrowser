@@ -58,7 +58,7 @@ struct BrowserView: View {
         // 単語解説ボトムシート
         .sheet(isPresented: $wordViewModel.isShowingSheet) {
             WordDefinitionSheet(
-                viewModel: wordViewModel,
+                initialWord: wordViewModel.selectedWord,
                 sourceURL: viewModel.currentURL?.absoluteString
             )
         }

@@ -97,12 +97,34 @@ Phase 6: iCloud同期・仕上げ            （約1-2日）
 
 ---
 
+## Phase 3.5: 解説シート内の単語長押し
+
+### 3.5-1. LongPressTextView 作成
+- [x] `UITextView` を `UIViewRepresentable` でラップした `LongPressTextView.swift` 作成
+- [x] `UILongPressGestureRecognizer` で長押し検出
+- [x] `closestPosition(to:)` + 文字列解析で長押し位置の単語を取得
+- [x] 英字のみの単語に絞るバリデーション
+- [x] `isScrollEnabled = false` で親 ScrollView へスクロール委譲
+- [x] `AutoSizingTextView` サブクラスで `intrinsicContentSize` を自動計算
+
+### 3.5-2. WordDefinitionContentView 作成
+- [x] 定義表示を再利用可能な `WordDefinitionContentView.swift` に切り出し
+- [x] `NavigationStack` 内でのプッシュナビゲーション対応
+- [x] 同じ単語の重複プッシュを防止
+
+### 3.5-3. WordDefinitionSheet 更新
+- [x] `NavigationPath` を導入してネスト遷移を管理
+- [x] Definition・Example の `Text` を `LongPressTextView` に差し替え
+- [x] `navigationDestination` で `WordDefinitionContentView` へ遷移
+
+---
+
 ## Phase 4: 単語帳機能
 
 ### 4-1. フォルダ管理
 - [ ] `FolderListView.swift` 作成
 - [ ] フォルダ一覧表示
-- [ ] フォルダ作成（名前入力アラート）
+- [x] フォルダ作成（名前入力アラート）← FolderPickerView に先行実装済み
 - [ ] フォルダ削除（スワイプ）
 - [ ] フォルダリネーム（長押しコンテキストメニュー）
 

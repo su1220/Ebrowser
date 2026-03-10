@@ -9,6 +9,10 @@ struct FolderPickerView: View {
 
     @Query(sort: \WordFolder.createdAt) private var folders: [WordFolder]
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var modelContext
+
+    @State private var showNewFolderAlert = false
+    @State private var newFolderName = ""
 
     var body: some View {
         NavigationStack {
@@ -39,9 +43,32 @@ struct FolderPickerView: View {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("キャンセル") { dismiss() }
                 }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        newFolderName = ""
+                        showNewFolderAlert = true
+                    } label: {
+                        Label("新規フォルダ", systemImage: "folder.badge.plus")
+                    }
+                }
+            }
+            .alert("新規フォルダ", isPresented: $showNewFolderAlert) {
+                TextField("フォルダ名", text: $newFolderName)
+                Button("作成") { createFolder() }
+                    .disabled(newFolderName.trimmingCharacters(in: .whitespaces).isEmpty)
+                Button("キャンセル", role: .cancel) {}
+            } message: {
+                Text("新しいフォルダの名前を入力してください")
             }
         }
         .presentationDetents([.medium])
         .presentationDragIndicator(.visible)
+    }
+
+    private func createFolder() {
+        let name = newFolderName.trimmingCharacters(in: .whitespaces)
+        guard !name.isEmpty else { return }
+        let folder = WordFolder(name: name)
+        modelContext.insert(folder)
     }
 }
